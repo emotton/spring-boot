@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Spring Boot - Cadastro</title>
+</head>
+<body>
+<h1>Formulário de Emprego</h1>
+<form action="#" th:action="@{/edit}" th:object="${emprego}" method="post">
+	Titulo: <input type="text" th:field="{titulo}">
+	<span th:if="${#fields.hasErrors('titulo')}"
+		th:errors="*{titulo}"></span>
+</form>
+</body>
+</html>
